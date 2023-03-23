@@ -55,9 +55,8 @@ function capicua(numero) {
   // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
   // Caso contrario: "No es capicua".
   // Tu código:
-  const numString = String(numero);
-  const newStringReverse = numString.split("").reverse().join("");
-  return numString === newStringReverse ? "Es capicua" : "No es capicua";
+  const newStringReverse = String(numero).split("").reverse().join("");
+  return numero == newStringReverse ? "Es capicua" : "No es capicua";
 }
 
 function deleteAbc(string) {
@@ -68,7 +67,7 @@ function deleteAbc(string) {
   let newString = "";
   for (let i = 0; i < string.length; i++) {
     const char = string[i];
-    if (char === "a" || char === "b" || char === "c") {
+    if ("abc".includes(char)) {
       continue;
     }
     newString += char;
@@ -82,8 +81,8 @@ function sortArray(arrayOfStrings) {
   // de la longitud de cada string.
   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
-  const compare = (a, b) => a.length - b.length;
-  return arrayOfStrings.sort(compare);
+  // const compare = (a, b) => a.length - b.length;
+  return arrayOfStrings.sort((a, b) => a.length - b.length);
 }
 
 function buscoInterseccion(array1, array2) {
