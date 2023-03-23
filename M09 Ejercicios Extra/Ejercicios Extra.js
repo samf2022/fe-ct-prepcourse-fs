@@ -16,7 +16,8 @@ function numberOfCharacters(string) {
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
   let obj = {};
-  const newArr = string.split("");
+
+  const newArr = string.split("").sort();
   newArr.forEach((char) => {
     obj[char] = (obj[char] || 0) + 1;
   });
